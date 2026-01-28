@@ -11,6 +11,7 @@ from rich import print as rprint
 
 import dashboard
 import logger
+import speed_test
 
 console = Console()
 
@@ -21,9 +22,10 @@ def show_menu():
     clear_screen()
     
     menu_text = """
-[bold cyan]1.[/bold cyan] 🖥️  Live Dashboard
+[bold cyan]1.[/bold cyan] 🖥️ Live Dashboard
 [bold cyan]2.[/bold cyan] 📜 Simple Logger
-[bold cyan]3.[/bold cyan] 🚪 Exit
+[bold cyan]3.[/bold cyan] 🚀 Speed Test 
+[bold cyan]4.[/bold cyan] 🚪 Exit
     """
     
     rprint(Panel(menu_text, title="[bold green]🐧 TUXITOR MENU[/bold green]", subtitle="Select an option"))
@@ -33,7 +35,7 @@ def main():
         show_menu()
         
         # Ask user for an input
-        choice = Prompt.ask("Choose an option", choices=["1", "2", "3"], default="1")
+        choice = Prompt.ask("Choose an option", choices=["1", "2", "3", "4"], default="1")
         
         try:
             if choice == "1":
@@ -47,6 +49,9 @@ def main():
                 logger.main()
                 
             elif choice == "3":
+                speed_test.main()
+
+            elif choice == "4":
                 console.print("[bold]See you later.[/bold]")
                 sys.exit(0)
                 

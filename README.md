@@ -5,5 +5,6 @@
 ## Requirements
 
 - Python 3.6+
-- 'psutil' library
-- 'rich' library
+- "psutil" library
+- "rich" library
+- "speedtest-cli" library
