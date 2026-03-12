@@ -43,7 +43,7 @@ def generate_sensor_table():
         f'{cpu_style}{cpu}%',
         f'{ram_pct}% ({ram_used}/{ram_total} GB)',
         f'{disk_pct}% ({disk_used}/{disk_total} GB)',
-        f'{net_sent} ↓{net_recv} GB'
+        f'{net_sent} ↓{net_recv} MB'
     )
 
     return Panel(table, title="[b]System Sensors[/b]", border_style='blue')
